@@ -66,3 +66,6 @@ sed -e '/test/h' -e '/check/x' example
 
 sed '1,10y/abcde/ABCDE/' example 
 #把1--10行内所有abcde转变为大写
+
+sed 's/[[:space:]]//g' 1.txt
+删除所有的空白字符，包括tab
