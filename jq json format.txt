@@ -10,4 +10,6 @@ cat json_raw.txt | jq '.employees[1].name'
 
 cat json_raw.txt | jq 'keys'//获取所有的key值
 
+cat json_raw.txt | jq ".[]" //获取所有的value值
+
 cat json_raw.txt | jq 'has("name")' name的可以值是否存在
