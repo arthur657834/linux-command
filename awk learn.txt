@@ -1,0 +1,43 @@
+awk '{pattern + action}' {filenames}
+
+$0则表示所有域,$1表示第一个域,$n表示第n个域
+ARGC               命令行参数个数
+ARGV               命令行参数排列
+ENVIRON            支持队列中系统环境变量的使用
+FILENAME           awk浏览的文件名
+FNR                浏览文件的记录数
+FS                 设置输入域分隔符，等价于命令行 -F选项
+NF                 浏览记录的域的个数
+NR                 已读的记录数
+OFS                输出域分隔符
+ORS                输出记录分隔符
+RS                 控制记录分隔符
+
+在awk中调用系统变量必须用单引号，如果是双引号，则表示字符串 
+Flag=abcd 
+awk '{print '$Flag'}'   结果为abcd 
+awk '{print  "$Flag"}'   结果为$Flag
+
+ex1:
+cat /etc/passwd |awk  -F ':'  'BEGIN {print "name,shell"}  {print $1","$7} END {print "blue,/bin/nosh"}'
+name,shell
+root,/bin/bash
+....
+blue,/bin/nosh
+
+ex2:
+搜索/etc/passwd有root关键字的所有行，并显示对应的shell
+awk -F: '/root/{print $7}' /etc/passwd   
+
+ex3:
+awk 'BEGIN {count=0;print "[start]user count is ", count} {count=count+1;print $0;} END{print "[end]user count is ", count}' /etc/passwd
+
+ex4:
+ls -l |awk 'BEGIN {size=0;print "[start]size is ", size} {if($5!=4096){size=size+$5;}else { printf "end"}} END{print "[end]size is ", size/1024/1024,"M"}' 
+awk -F ':' 'BEGIN {count=0;} {name[count] = $1;count++;}; END{for (i = 0; i < NR; i++) print i, name[i]}' /etc/passwd
+awk '{ i=1;while(i<NF) {print NF,$i;i++}}' file
+
+ex5:
+-v var=val 把val值赋值给var
+awk -v num=$num -v num1=$num1
+
