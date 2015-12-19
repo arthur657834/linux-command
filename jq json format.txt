@@ -4,6 +4,15 @@ yum -y install jq
 
 cat json.txt | jq .
 
+cat json.txt | jq .[0] 第一个json数组
+
+jq '.[0] | {message: .commit.message, name: .commit.committer.name}' 读取message和name，并重定向到文件
+
+jq '[.[] | {message: .commit.message, name: .commit.committer.name}]' 结果变成json数组
+
+jq '[.[] | {message: .commit.message, name: .commit.committer.name, parents: [.parents[].html_url]}]'
+parents field is being set to [.parents[].html_url]
+
 cat json_raw.txt | jq '.location.state'
 
 cat json_raw.txt | jq '.employees[1].name'
