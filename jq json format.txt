@@ -22,3 +22,16 @@ cat json_raw.txt | jq 'keys'//获取所有的key值
 cat json_raw.txt | jq ".[]" //获取所有的value值
 
 cat json_raw.txt | jq 'has("name")' name的可以值是否存在
+
+
+过滤器说明：
+.foo, .foo.bar
+获取json中key的值，可过滤出多级json串中的key值。
+.foo, .bar
+同时获取json中多个key的值。但过滤出的多个值会分多行显示。
+{foo: .foo, bar: .bar}
+获取json中部分key的值，并组合为新的object形式的json串。foo与bar即新json串的key，.foo与.bar即原json串中需要获取值的key。
+注意，生成的json串内容顺序是倒序的，上例中会生成：{"bar":"", "foo":""}
+[.foo, .bar]
+获取json中部分key的值，并组合为新的数组形式的json串。.foo与.bar即原json串中需要获取值的key。
+注意，生成的json串内容顺序是正序的，上例中会生成：["foov", "barv"]
