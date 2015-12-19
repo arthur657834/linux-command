@@ -23,6 +23,7 @@ cat json_raw.txt | jq ".[]" //获取所有的value值
 
 cat json_raw.txt | jq 'has("name")' name的可以值是否存在
 
+echo '{"foo.1": 42, "bar 1": "less interesting data"}' |jq .'["bar 1"]'
 
 过滤器说明：
 .foo, .foo.bar
