@@ -69,3 +69,6 @@ sed '1,10y/abcde/ABCDE/' example
 
 sed 's/[[:space:]]//g' 1.txt
 删除所有的空白字符，包括tab
+
+sed -i '3{p;s/.*/date/e}' param.sh 
+e:excute  将date的执行结果进行tihuan
