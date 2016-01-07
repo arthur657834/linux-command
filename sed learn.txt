@@ -71,4 +71,8 @@ sed 's/[[:space:]]//g' 1.txt
 删除所有的空白字符，包括tab
 
 sed -i '3{p;s/.*/date/e}' param.sh 
-e:excute  将date的执行结果进行tihuan
+e:excute  将date的执行结果进行替换
+
+sed '/xx/{x;p;x}'
+p 打印pattern space， 打印空行
+x 交换pattern和hold space   这时hold space为空，pattern space为匹配/xx/这一行的内容
