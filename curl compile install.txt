@@ -1,0 +1,32 @@
+yum install epel-release -y
+python-setuptools libxml2-devel libevent-devel openssl-devel jemalloc-devel jansson-devel CUnit-devel libssh2-devel
+
+spdylay：
+	git clone https://github.com/tatsuhiro-t/spdylay.git
+	cd spdylay/
+	autoreconf -i
+	automake
+	autoconf
+	./configure
+	make
+	make install
+	
+nghttp2:
+    git clone https://github.com/tatsuhiro-t/nghttp2.git
+    cd nghttp2
+    autoreconf -i
+    automake
+    autoconf
+    ./configure
+    make//报错下次再试
+    make install
+
+curl:
+	wget http://curl.haxx.se/download/curl-7.46.0.tar.gz
+	tar xvf curl-7.46.0.tar.gz
+	cd curl-7.46.0
+	./configure --with-nghtt2=/usr/local/nghttp2
+	make
+	make install
+
+curl –version 查看是否编译成功
