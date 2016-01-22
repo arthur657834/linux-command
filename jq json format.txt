@@ -15,6 +15,8 @@ parents field is being set to [.parents[].html_url]
 
 cat json_raw.txt | jq '.location.state'
 
+cat json_raw.txt | jq '.author | {name}' //单独显示name
+
 cat json_raw.txt | jq '.employees[1].name'
 
 cat json_raw.txt | jq 'keys'//获取所有的key值
