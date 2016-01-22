@@ -1,0 +1,91 @@
+http://sourceforge.net/projects/xmlstar/files/xmlstarlet/
+yum -y install libxml2* libxslt*
+./configure
+make;make install
+
+xml fo -h
+更多参数查询
+
+xml fo test.xml 格式化xml文件
+
+xml ls
+生成当前目录的xml文件
+
+xml ed -d "//d" -d "//@a"  test.xml
+删除d节点和a //d是xpath写法
+
+xml ed -r "//f" -v "file" -r "//@s" -v "size" test.xml
+替换节点f名称为file,属性s=>size
+
+xml val test.xml
+检测是不是符合规范的xml文件
+
+xml sel -t -m "/xml/file" -v "@name" ls2.xml
+xml sel -t -m "/*/*[2]" -v "name(.)" 1.xml 
+xml sel -t -m "/xml/file" -v "concat(@name,' ')" ls2.xml
+取/xml/file下属性name的值,concat 每个值之间以空格连接
+
+xml sel -t -m "/xml/file" -v "concat(@name,'
+')" ls2.xml
+属性name的值换行连接
+
+xml sel -t -m "/rss/channel/item/description" -v "." test3.xml
+取属性description的值
+
+xml el test.xml:输出节点
+xml el -u test.xml:输出唯一节点
+参数意义最好写之前再看一下！！！！！！！！！！！！！
+–a 属性
+–v 属性名称及其取值
+–d1 深度
+-n 自动换行
+-o " = " 输出=
+-c 表示copy拷贝
+-T 删除掉所有的xml标签
+-f 输出文件名称
+-C 生成一个xsl文件
+-t 表示使用模板 
+
+xml ed -i "/*/*[1]" -t attr -n "www" -v "google" 1.xml 
+<name>book1</name>  => <name www="google">book1</name> 
+
+xml ed -i "/*/*[2]" -t text -n "" -v "my baby" 1.xml
+增加my baby 
+
+xml.exe ed -i "/*/*[1]" -t elem -n "www" -v "google" 1.xml<=> xml ed -a "//name[3]" -t elem -n "google" -v "web" 1.xml 
+增加<www>google</www> 
+
+xml ed -m "//name[1]/text()" "//name[2]" 1.xml 
+移动值
+
+xml ed -u "//name[1]/@price" -v "888" 1.xml
+修改price的值
+
+xml sel -t -m "/*" -m "//*" -v "sentence[not(contains(text(),'love'))]" 1.xml
+
+xml sel -t -m "//mother" -s A:T:L "name" -v "name" -n 1.xml 
+-s就是“排序（sort）”，A就是升序，T表示后续的“name”这个排序元素的值是文本（text），而L表示小写字母优先排在大写字母之前，L就是lower-first的缩写
+
+xml sel -t -v "starts-with('good','g')" 1.xml
+xml.exe sel -t -v "normalize-space('I  love   you.')" 1.xml 
+多个连续空格变为一个空格
+
+xml sel -t -m "//b" -i ".<3" -c "." 1.xml 
+-i if小于3输出  -i <test-XPath>
+
+ex.
+<?xml version="1.0"?>
+<r xmlns="http://www.bing.com">
+  <b>b1</b>
+  <b>b2</b>
+</r>
+
+xml ed -N x="http://www.bing.com" -d "//x:b[2]" test5.xml //xml ed -d "//b[2]" test5.xml 是不对的，注意学习，以后写xpath相关的东西可以学习
+参数部分表示给“http://www.bing.com”这个名称空间取一个名称，叫做“x”，因此在后续的XPath中使用就让XPath的定位变为生效了
+
+xml sel -t -m "/*" -v "namespace-uri(.)" test5.xml 
+<=> xml sel -t -m "node()" -v "namespace-uri(.)" test5.xml 
+<=> xml sel -t -v "namespace-uri(/*)" test5.xml 
+取xmlns的值
+
+
