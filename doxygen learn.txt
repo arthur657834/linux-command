@@ -1,0 +1,9 @@
+doxygen -g test #生成test模版
+
+doxygen -s -g test #-s 去注释
+
+doxygen -u test # update
+
+doxygen HTTPReqGenTest.java Calculator.java # 生成程序说明文档
+
+

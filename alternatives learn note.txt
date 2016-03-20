@@ -1,0 +1,10 @@
+alternatives --install /usr/bin/java java /usr/local/lib/java/jdk1.7.0_67 17067 
+# /usr/bin/java   java link所在的路径
+# java  创建link的名称
+# /usr/local/lib/java/jdk1.7.0_67  java链接指向的路径
+# 17067  根据版本号设置的优先级（更改的优先级需要大于当前的）版本越高优先级越高
+
+alternatives --remove  java /usr/local/lib/java/jdk1.7.0_67
+alternatives --auto java
+alternatives --config java
+alternatives --display java
