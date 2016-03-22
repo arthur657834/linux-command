@@ -1,0 +1,49 @@
+yum -y install sl
+sl:火车跑过
+
+telnet towel.blinkenlights.nl
+动态显示一些数据，原理？！！！！
+
+rev 1.txt 
+将文件中的内容取反
+
+factor 200
+200: 2 2 2 5 5
+给出200的因子
+
+yum -y install cowsay
+cowsay "test"
+cowthink "test"
+
+yes i do
+不断输出 i do
+
+yum -y install oneko
+oneko
+
+fork 炸弹
+:(){ :|:& }:
+
+espeak
+将音量调至最大
+
+yum -y install aalib
+aafire
+火焰效果
+
+yum -y install fortune-mod
+fortune
+出现名言
+
+yum install ncurses-devel ncurses -y
+wget http://www.asty.org/cmatrix/dist/cmatrix-1.2a.tar.gz
+
+
+
+
+
+
+
+
+
+
