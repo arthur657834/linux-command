@@ -1,43 +1,46 @@
 yum -y install sl
-sl:ç«è½¦è·‘è¿‡
+sl:»ğ³µÅÜ¹ı
 
 telnet towel.blinkenlights.nl
-åŠ¨æ€æ˜¾ç¤ºä¸€äº›æ•°æ®ï¼ŒåŸç†ï¼Ÿï¼ï¼ï¼ï¼
+¶¯Ì¬ÏÔÊ¾Ò»Ğ©Êı¾İ£¬Ô­Àí£¿£¡£¡£¡£¡
 
 rev 1.txt 
-å°†æ–‡ä»¶ä¸­çš„å†…å®¹å–å
+½«ÎÄ¼şÖĞµÄÄÚÈİÈ¡·´
 
 factor 200
 200: 2 2 2 5 5
-ç»™å‡º200çš„å› å­
+¸ø³ö200µÄÒò×Ó
 
 yum -y install cowsay
 cowsay "test"
 cowthink "test"
 
 yes i do
-ä¸æ–­è¾“å‡º i do
+²»¶ÏÊä³ö i do
 
 yum -y install oneko
 oneko
 
-fork ç‚¸å¼¹
+fork Õ¨µ¯
 :(){ :|:& }:
 
 espeak
-å°†éŸ³é‡è°ƒè‡³æœ€å¤§
+½«ÒôÁ¿µ÷ÖÁ×î´ó
 
 yum -y install aalib
 aafire
-ç«ç„°æ•ˆæœ
+»ğÑæĞ§¹û
 
 yum -y install fortune-mod
 fortune
-å‡ºç°åè¨€
+³öÏÖÃûÑÔ
 
 yum install ncurses-devel ncurses -y
 wget http://www.asty.org/cmatrix/dist/cmatrix-1.2a.tar.gz
-
+cd cmatrix-1.2a
+./configure 
+make
+make install
 
 
 
