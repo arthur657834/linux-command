@@ -1,0 +1,65 @@
+http://www.07net01.com/linux/meitianyigeminglingzhiiozone_433157_1371790486.html
+
+wget http://www.iozone.org/src/current/iozone3_434.tar
+tar xvf iozone3_434.tar
+cd iozone3_434/root/iozone3_434/src/current
+make linux-ia64
+cp iozone /usr/bin/
+
+测试参数： -i # 用来指定测试内容.
+0=write/rewrite
+1=read/re-read
+2=random-read/write
+3=Read-backwards
+4=Re-write-record
+5=stride-read
+6=fwrite/re-fwrite
+7=fread/Re-fread,
+8=random mix
+9=pwrite/Re-pwrite
+10=pread/Re-pread
+11=pwritev/Re-pwritev,
+12=preadv/Re-preadv
+测试格式为-i #，比如测试写：-i 0,测试读和写：-i 0 -i 1。
+
+-R 产生execl格式的输出日志。
+
+-b 将产生二进制的execl的日志文件名。
+
+-s 测试的文件大小。 -s 512k or -s 512M or -s 1G
+
+-q 指定最大文件块大小（这里的 -q 64k 包括了4K,8K,16K,32K,64K） -q 512K or -q 512M or -q 1g
+
+-r 指测试的文件块大小（与-q有别，-r 64k只进行64k的测试）
+
+-a 在希望的文件系统上测试，不过只有-a的话会进行全面测试，要花费很长时间，最好用-i指定测试范围。
+
+-g 指定最大测试文件大小。
+
+-n 指定最小测试文件大小。
+
+-f 指定测试文件的名字，完成后会自动删除（这个文件必须指定在你要测试的那个硬盘中）
+
+-F filename filename filename
+
+-C 显示每个节点的吞吐量。
+
+-c 测试包括文件的关闭时间
+
+-t 线程数
+
+-y 指定最小记录大小 512K or -q 512M or -q 1g
+
+-U mountpoint
+Mount point to unmount and remount between tests. Iozone will unmount and remount
+this mount point before beginning each test. This guarantees that the buffer cache does not
+contain any of the file under test.
+
+iozone -a -n 512m -g 16g -i 0 -i 1 -i 5 -f /mnt/iozone -Rb ./iozone.xls
+
+注：进行全面测试，最小测试文件为512M，直到测试到16g，测试read,write,和strided read,测试的地方在/mnt下，生成xls文件。要求-g参数大于swap的两倍
+
+
+
+
+

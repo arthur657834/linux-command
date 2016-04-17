@@ -1,0 +1,38 @@
+yum install util-linux-ng
+
+lsblk
+
+NAME : 这是块设备名。
+
+MAJ:MIN : 本栏显示主要和次要设备号。
+
+RM : 本栏显示设备是否可移动设备。注意，在本例中设备sdb和sr0的RM值等于1，这说明他们是可移动设备。
+
+SIZE : 本栏列出设备的容量大小信息。例如298.1G表明该设备大小为298.1GB，而1K表明该设备大小为1KB。
+
+RO : 该项表明设备是否为只读。在本案例中，所有设备的RO值为0，表明他们不是只读的。
+
+TYPE :本栏显示块设备是否是磁盘或磁盘上的一个分区。在本例中，sda和sdb是磁盘，而sr0是只读存储（rom）。（LCTT译注，此处sr0的RO项没有标记为1，可能存在一些错误？）
+
+MOUNTPOINT : 本栏指出设备挂载的挂载点。
+
+-m                权限
+-f                文件系统信息
+-a                all
+-t                tree
+-b /dev/sda       指定设备
+-S                要获取SCSI设备的列表
+-s --inverse      
+-nl 
+
+类似的命令：
+blkid
+blkid /dev/sda1
+blkid -U d3b1dcc2-e3b0-45b0-b703-d6d0d360e524  <UUID>
+blkid -po udev /dev/sda1
+blkid -g         重置缓存           
+
+
+
+
+
