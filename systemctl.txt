@@ -1,0 +1,56 @@
+#查看启动时间
+systemd-analyze <=> systemd-analyze time
+systemd-analyze blame
+
+systemctl <=> systemctl list-units
+systemctl --failed
+
+#所有被激活的服务
+systemctl list-units -t service
+
+systemctl list-units --type=target
+
+
+systemctl disable dnsmasq.service
+systemctl enable dnsmasq.service
+systemctl start dnsmasq.service
+systemctl stop dnsmasq.service
+systemctl restart dnsmasq.service
+systemctl try-restart dnsmasq.service
+
+#远程管理服务
+systemctl status sshd -H root@1.2.3.4
+
+#切换当前启动模式
+systemctl isolate graphical.target
+	0 runlevel0.target, poweroff.target
+
+	1, s, single runlevel1.target, rescue.target
+	
+	2, 4 runlevel2.target, runlevel4.target, multi-user.target
+	
+	3 runlevel3.target, multi-user.target
+	
+	5 runlevel5.target, graphical.target
+	
+	6 runlevel6.target, reboot.target
+	
+systemctl get-default
+systemctl set-default graphical.target
+
+systemctl poweroff
+systemctl reboot
+systemctl suspend
+systemctl hibernate
+
+
+journalctl
+
+#查看所有引导日志
+journalctl -b
+journalctl -f
+journalctl /usr/sbin/dnsmasq
+Journalctl --since=yesterday
+journalctl --since=2014-03-15 --until="2014-03-17 23:59:59"
+journalctl -u httpd since=00:00 --until=8:00
+
