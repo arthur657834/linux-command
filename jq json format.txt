@@ -1,40 +1,35 @@
-https://stedolan.github.io/jq/manual/
-
-yum -y install jq
-
-cat json.txt | jq .
-
-cat json.txt | jq .[0] 第一个json数组
-
-jq '.[0] | {message: .commit.message, name: .commit.committer.name}' 读取message和name，并重定向到文件
-
-jq '[.[] | {message: .commit.message, name: .commit.committer.name}]' 结果变成json数组
-
-jq '[.[] | {message: .commit.message, name: .commit.committer.name, parents: [.parents[].html_url]}]'
-parents field is being set to [.parents[].html_url]
-
-cat json_raw.txt | jq '.location.state'
-
-cat json_raw.txt | jq '.author | {name,name2}' //单独显示name,name2
-
-cat json_raw.txt | jq '.employees[1].name'
-
-cat json_raw.txt | jq 'keys'//获取所有的key值
-
-cat json_raw.txt | jq ".[]" //获取所有的value值
-
-cat json_raw.txt | jq 'has("name")' name的可以值是否存在
-
-echo '{"foo.1": 42, "bar 1": "less interesting data"}' |jq .'["bar 1"]'
-
-过滤器说明：
-.foo, .foo.bar
-获取json中key的值，可过滤出多级json串中的key值。
-.foo, .bar
-同时获取json中多个key的值。但过滤出的多个值会分多行显示。
-{foo: .foo, bar: .bar}
-获取json中部分key的值，并组合为新的object形式的json串。foo与bar即新json串的key，.foo与.bar即原json串中需要获取值的key。
-注意，生成的json串内容顺序是倒序的，上例中会生成：{"bar":"", "foo":""}
-[.foo, .bar]
-获取json中部分key的值，并组合为新的数组形式的json串。.foo与.bar即原json串中需要获取值的key。
-注意，生成的json串内容顺序是正序的，上例中会生成：["foov", "barv"]
+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
+UGowcmDWJgts+D8q+5dtwA==

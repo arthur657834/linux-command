@@ -1,10 +1,11 @@
-alternatives --install /usr/bin/java java /usr/local/lib/java/jdk1.7.0_67 17067 
-# /usr/bin/java   java link所在的路径
-# java  创建link的名称
-# /usr/local/lib/java/jdk1.7.0_67  java链接指向的路径
-# 17067  根据版本号设置的优先级（更改的优先级需要大于当前的）版本越高优先级越高
-
-alternatives --remove  java /usr/local/lib/java/jdk1.7.0_67
-alternatives --auto java
-alternatives --config java
-alternatives --display java
+U2FsdGVkX182xFuLPPK48nnp+lG0xLjtUhTNVt+H4eWnB4jPXOizUe4ATk3PRmgj
+5jAxvy/qdgQcEHdu4SbcC3wLW2GJmMAm4zgB4rK+6+jIa9rgjegi36JpSTRlTuwK
+oMRQ3Xlo6fZkGxDw29XiRu7XFYOTDO2Gz6SbNR7rmvrqTAzBUmjWRyaQWp+x4uEH
+LkyFojmD+iiCslyaFfoU3U4jXmwHhyxfWDZ0JGS/s5lhsUuL7bnYfYznt0eiDLUw
+Dkj5Wj6AVZ8YB+6N6wDxAJ0svV2PhaK5bUHBuglGlnmOiIId1IUoXsu2Kk9i5apL
+ROhtHNpqdf8IM4G1mdtIK5K68+NYtwQV98lXcFdDCDNDwPHngu9b6DIcHr6EKl1O
+ZIGrzkO/g7gXv+lARo79HYCY1hjU/EH57X3Y8/VWhxKwWXhMvrDnMN6MXv6SoBMJ
+9nYc982cFJH8wc4AyJ/CGdj7onV8iFVSov+bmxtrLmHw39XOGRW6+UiJ8iNS7JG7
+K6la87zBdzYXNhf8qsT4C/RU7DYoSw03uxV3cQTJ2y9TOYvNqqFocTdMm3vsc9m+
+d71m7CosZQiJMP0hyCq27ePOxeUIud3DyiKASbuz8CcPkZAnObIS7dg34TMa1GcT
+ufY6KN4cJzszMQOujqZVkA==

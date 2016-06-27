@@ -1,38 +1,26 @@
-yum install util-linux-ng
-
-lsblk
-
-NAME : 这是块设备名。
-
-MAJ:MIN : 本栏显示主要和次要设备号。
-
-RM : 本栏显示设备是否可移动设备。注意，在本例中设备sdb和sr0的RM值等于1，这说明他们是可移动设备。
-
-SIZE : 本栏列出设备的容量大小信息。例如298.1G表明该设备大小为298.1GB，而1K表明该设备大小为1KB。
-
-RO : 该项表明设备是否为只读。在本案例中，所有设备的RO值为0，表明他们不是只读的。
-
-TYPE :本栏显示块设备是否是磁盘或磁盘上的一个分区。在本例中，sda和sdb是磁盘，而sr0是只读存储（rom）。（LCTT译注，此处sr0的RO项没有标记为1，可能存在一些错误？）
-
-MOUNTPOINT : 本栏指出设备挂载的挂载点。
-
--m                权限
--f                文件系统信息
--a                all
--t                tree
--b /dev/sda       指定设备
--S                要获取SCSI设备的列表
--s --inverse      
--nl 
-
-类似的命令：
-blkid
-blkid /dev/sda1
-blkid -U d3b1dcc2-e3b0-45b0-b703-d6d0d360e524  <UUID>
-blkid -po udev /dev/sda1
-blkid -g         重置缓存           
-
-
-
-
-
+U2FsdGVkX1/deEAyoN7ZK5p7xC9mlJYz8BH8sOpmZlHHHH18TFh5sPeeXPNXNaDm
+BdfWako2AwNw9WGCRSC/e8YW/OyYIms6jCx0FW1a9qROLpKeNgvhxVMMEJurGFxY
+1j10m4AGgx7hiiHIwmRMq1dGhAYYL/2g8hqU/oqDwcsaji8pZglMzjs68+PfLvat
+bbzLj5MTAixjb0s02CEso9s6+YyAeYXW0dKP8IM+ZDk+IHctT0kX6PWqwLowMakY
+GBcvAihlUn2QT2muDazobl5FFkXNxsqWayafsSPvRGy9HbkdGjaWUCdUAlSJI+4e
+fo0HGgBoZBt2C0MgIxYtObERLinXIu3hkcblMX+ADtVJGEtkRdIzm8RGRf7iGhue
+XE4msQeCaa9f/w5EmGGo5CVAe49kQEnnemO4J0KKVxclOjaCYTpFcCVdC++2z3MB
+7C49m8/fde//9y3Fqk50SZVGxTJ+uc8ZkQzQJA66GRlI8qvkGKOfPDzNqCe5uxUa
+/TkCG5iEGuONo3dNZkXD2+OxbDd65+lWJHiRhK9k0z27rHDcIyVfNapyF4mh7tQh
+uBAAMYVibvD8ktSvoQfzOWJDzLtUcX9UFoTQs0NqLBWQKGbsF0zo95eNeQJIdioJ
+9csdISiCwnp6Udx/xW1Vt/t6aNxFzVJiUNI9aiSbBBaSnnaNdG6Y3hlKjRiFnjrZ
+/ZZlNSPoV3EmozQHI3TEhZ9fDuC+G2WXhQqnYcjCV9dipuEY3O3f9NCKPhSSNweM
+fVFApwiz3mE7hAwigKFeIr5nKVItM129oV0xll3fxyUx1Bu9Opq+Pc3d23Kn+Od+
+XfFmkTw1FQzN/hB4R7Py1FEs6uu4vZypWUr2AgDIZxhBVpTC/zHsrkTKu4itV0el
+YxByLHktpPhuB1on7DKvRqalgM0hu1eWoMqDUI//5SAQJ+CVdLeycCEyFVdN4Cpz
+IKf/XnrMBx4SUlt4FPraAOmKjkPjJwQv8OJz6M7+jg76sP46qWr3M5FFPuDgLRv1
+vl+vOEV1lr/DJf6+QwrbR3S8Zftu4pIwPnzjgAUwM7W0yA+KIoeIUVdGlvz+YRyt
+f/UIFo3IqAnfZu2ruTJ1lIoTe7d+rf1sCm/DrbYylA6DLyzg58O2lAdIyfITCoKc
+eNjSsUotyTBaAhcvDAIfAkh+45N8derS/rBSq+/h59WzRHL+ny1ApHAKilOzdzB5
+d2LY4r3uSqIwwTKiDNogChtRVT0VoNwSOmb5Zm5M/edfqNWK4rTJsUvVcYJaEQUR
+f5jS+2R0kYFH1+L2jCrd7SPN5DrSnmaVL/iLg6/o9txqvsTWfi5sVkEJCf5L5qKl
+HeuZquPlsJw1sE00nY0ChilXKVjRJYUfPV2kL5bNzBTlTabIMa/94O94TlgXg9di
+W/CCyNnYzg0LAlczrKlWAJThcn48eVb4uPHqsGQYe397dJQtqcdSWuIGWFGBZZH2
+XuAu6cQi9LsbAPmRUiIqK7DssSQwGe4A1pX3+Efq9rmXutKw7Q8llyQtuaDaCwjb
++b/QtHATnRLHEfn680Smru1EiFBLbd/F9hW95yZAsO4LB7eIaRhTNf1wDjgefdji
+KZYrE3ubHZ5P/jVIMEyt3g==

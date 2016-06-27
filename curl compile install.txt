@@ -1,32 +1,15 @@
-yum install epel-release -y
-python-setuptools libxml2-devel libevent-devel openssl-devel jemalloc-devel jansson-devel CUnit-devel libssh2-devel
-
-spdylay：
-	git clone https://github.com/tatsuhiro-t/spdylay.git
-	cd spdylay/
-	autoreconf -i
-	automake
-	autoconf
-	./configure
-	make
-	make install
-	
-nghttp2:
-    git clone https://github.com/tatsuhiro-t/nghttp2.git
-    cd nghttp2
-    autoreconf -i
-    automake
-    autoconf
-    ./configure
-    make//报错下次再试
-    make install
-
-curl:
-	wget http://curl.haxx.se/download/curl-7.46.0.tar.gz
-	tar xvf curl-7.46.0.tar.gz
-	cd curl-7.46.0
-	./configure --with-nghtt2=/usr/local/nghttp2
-	make
-	make install
-
-curl –version 查看是否编译成功
+U2FsdGVkX1/LL7l87bQIZAGGeiqlAuWN+3ShoDWD5EM2WFSfbEK6exvmtQbMEbI1
+nzTXELks3PWWjZw9Xrc36WPGhpGiMOcgFNsuf0VVTWOxyJ117Fd7Ho7OdlNi3qZT
+CiJjGC8oGbMZT/9mD72JFUZcfEhwE9AsczEdnreymHQ/PhFjBlsgJGP+5P7CbwFM
+d/J3/NUR3/qku2wYVslesMOvxdmJhgPxVCJOc9mLRLSIiFffz//PJ6+GtXb6nud4
+30e1Ka9A7njmjfceXXxMBfevMUrXnIOGG7Gi+iCluALuMOFt51ik+GlTiFPPfTIy
+jBy+b6QLK8R7tx4YeOWZBQHt6JGjCCX+v4cj59p+7S0oe8jwOk9ut7VdaR4qaXFf
+wy8MDlcv8pkEl4F+2yT/jUA8DDmr24Xaw7Bj2O3slgLfXYSfBiXxr0SyM/Bs3gVs
+7irb6VqUvYr4Y5TMhO15HWb2N2XEkT2e+p0Qw8hkDIRuo6HUL7lnC9Oj36CeB/zI
+Q0X7qYQ3wigzUxlDvE+/+6ySA9j6n+5gd2LuskhyouPdiGQ9w8nb1Yqi0O044y8J
+xgQxXCKhUma1pGJ2zk1cbCQ0t3NOBr6ehdyVCjIcmJO6XNEavthpYOv0GnsWKRfZ
+RsEyxz/LoiU2pyM1DeRU1SZ8titGn8AT+0O+9xpS6xxIG7ZWz8OSO74+WNlxUz9z
+ePe2MCmfOyIrbbNqkFqNv66gf/CrBenGW8ENxN1rL+2onlbLJ1eEw1Ne9v9D0OSL
+8i4ocNhGQukEx1OX9MBOvGp4DPI1sGFhSguOTZ9fgVJDs37Z1245xQyJPAa9NTBF
+Bxls+Az/72junDqhfdDtqLXKyOUAhT5KEWq3hyiYv6Uqlq0pCBE4e+bwHjwzJ30R
+dnaXppooixboVsHCGBFlvKt2PH2zD+KpTKarpMN07JgXyu/Dh+E6Uw==

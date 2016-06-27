@@ -1,56 +1,26 @@
-#查看启动时间
-systemd-analyze <=> systemd-analyze time
-systemd-analyze blame
-
-systemctl <=> systemctl list-units
-systemctl --failed
-
-#所有被激活的服务
-systemctl list-units -t service
-
-systemctl list-units --type=target
-
-
-systemctl disable dnsmasq.service
-systemctl enable dnsmasq.service
-systemctl start dnsmasq.service
-systemctl stop dnsmasq.service
-systemctl restart dnsmasq.service
-systemctl try-restart dnsmasq.service
-
-#远程管理服务
-systemctl status sshd -H root@1.2.3.4
-
-#切换当前启动模式
-systemctl isolate graphical.target
-	0 runlevel0.target, poweroff.target
-
-	1, s, single runlevel1.target, rescue.target
-	
-	2, 4 runlevel2.target, runlevel4.target, multi-user.target
-	
-	3 runlevel3.target, multi-user.target
-	
-	5 runlevel5.target, graphical.target
-	
-	6 runlevel6.target, reboot.target
-	
-systemctl get-default
-systemctl set-default graphical.target
-
-systemctl poweroff
-systemctl reboot
-systemctl suspend
-systemctl hibernate
-
-
-journalctl
-
-#查看所有引导日志
-journalctl -b
-journalctl -f
-journalctl /usr/sbin/dnsmasq
-Journalctl --since=yesterday
-journalctl --since=2014-03-15 --until="2014-03-17 23:59:59"
-journalctl -u httpd since=00:00 --until=8:00
-
+U2FsdGVkX1+2uH/CIgcu0PQ7sX7qu8K3gsr1NaQkjwFIDBHB9D6q0+SCWOWmIB+a
+iH4E67PjPl3/C+KwinnPNWtPt5hSrAZiNCiL20g0pua4D2jCzvsQGNNw2fceRENs
+dmevpbkzvHBhYE34fm/1FRWiLFLhK/n74id2rPVaRrDMkWKfkXNOFJjP/j0IYyyv
+EPj/veEMsC6EAqWsLpAJ9/crNLj1UsHD6L8zEGr40rAsydz/q38j/WjuFtUBsa4Q
+QJTUJXchYRHHrOxEhsGDwl3nBKUiBEubyl188y+7hj0NHY/bMO4BeEsqkjjgGCwl
+km+rVREPYXp36sbk5nkeFj8vRrqjze8WXhWhkd9kk4P9CKF1IvERyKgaWiQ/4LXS
+vPt5Y99cV+9uwv0OjD0/FLrcbUQ/ux0KKFWz8hsYCCA2431DHFGlX7CR9Gs3YOAO
+HwzMyv6HqicqHoI9skQJiANSFcF7Epa2hgSJY2/8GCiqlozsiUP1mxeAzq8bM9i3
+2pUgT0MnCMccFl34bUHZOdHB3B5CIRiifSjfAt6xx5dX3JEZ0H9eTTXbeB7RCqEV
+oZyIOl/8QxOyw5vHrjdYLnWWi+ayui9mvVG04SekSkXpl4qn+1azb9dsaOsbSjmL
+b5KZLZf9A3uc+cUlshREG//eecE/w6OjbSqstGVzvlTPXbsBJkuKs8v70Feqzys+
+MUuzSaOqJHgpMaWoRHzucn/6R1Zk9cqrQw02PqlfpHzs+b1G7nnFjOdmAMvOYzOc
+q7AYpvzajB4OyXUlJTQ6ia6BC2TCKpyFIKnk5uxyI46KEGGYyfMBjyOnIgPGDOBg
+TleE2P+qgT8uVW0SAOdoqbfF6QL9sY1ROEJIOLHiDP3EhGqEebQ6eUGANwn2Pr48
+dQy/4pTar12gSw2eKjg+Pp1DsGPOle4jHRIP1+H4y2WgAj5G9r84fuO0fywqB4iA
+UyyfnMt3yIyayLVzwhel+KbjHR+COj5bjLwVuUoXO853kwdT1xveL49dDkqmyLOn
+BM4tbQDjM5LSTmuLqPsnkz34JxVLzTliW+63mCK/T89XZef0ZWourdE8UzQx94mP
+tuC1VtVxV6KMd4i3vd98SETGyrnPEsPG5sIPQ8dBgWrt6lULszmWCmXGJiqfUa32
+pQkmp3gD295WaZ2B50oE+CU1LuvmjIRsQTodAziDDJ9l5zoX9c59QnmVwz3/ktMa
+VEVs2ZhSQmW6qsdbgnvzOcqY1T1o6vDmhgfEeL5icd2FGGfbJcRzG1kioSwcMA9V
+MPtzJ4mhNufJxBIJnpNtszoqTV+SbsHr2qebotedaF6O4vW0WuFElquDpHNtjnHg
+c02hIGiGy3Alfvjoucoa0BAd27xkmxlfpz38kgj/RTOsupcc/Fs9ZymccKWybMwl
++X/t162MrAOhCPKA5rkS1BgAhzsx/OBWkdga26oV5xz2ngfuMMFHDwx+6NzKH0He
+6ji7TRz1UhhGVSafGjqdYryPsHVk3BpKirV4pPVr7xEte6If3YJJ3GKdHEji7TOG
+7s6ERPlKqlZkbdvaZBBnEyKk3hwCjXqwPeCbGfChSW+36HAC6ZOvm5A188g182dF
+bv5dIrQuSE8VlTCoENM0tg==

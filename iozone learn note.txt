@@ -1,65 +1,43 @@
-http://www.07net01.com/linux/meitianyigeminglingzhiiozone_433157_1371790486.html
-
-wget http://www.iozone.org/src/current/iozone3_434.tar
-tar xvf iozone3_434.tar
-cd iozone3_434/root/iozone3_434/src/current
-make linux-ia64
-cp iozone /usr/bin/
-
-测试参数： -i # 用来指定测试内容.
-0=write/rewrite
-1=read/re-read
-2=random-read/write
-3=Read-backwards
-4=Re-write-record
-5=stride-read
-6=fwrite/re-fwrite
-7=fread/Re-fread,
-8=random mix
-9=pwrite/Re-pwrite
-10=pread/Re-pread
-11=pwritev/Re-pwritev,
-12=preadv/Re-preadv
-测试格式为-i #，比如测试写：-i 0,测试读和写：-i 0 -i 1。
-
--R 产生execl格式的输出日志。
-
--b 将产生二进制的execl的日志文件名。
-
--s 测试的文件大小。 -s 512k or -s 512M or -s 1G
-
--q 指定最大文件块大小（这里的 -q 64k 包括了4K,8K,16K,32K,64K） -q 512K or -q 512M or -q 1g
-
--r 指测试的文件块大小（与-q有别，-r 64k只进行64k的测试）
-
--a 在希望的文件系统上测试，不过只有-a的话会进行全面测试，要花费很长时间，最好用-i指定测试范围。
-
--g 指定最大测试文件大小。
-
--n 指定最小测试文件大小。
-
--f 指定测试文件的名字，完成后会自动删除（这个文件必须指定在你要测试的那个硬盘中）
-
--F filename filename filename
-
--C 显示每个节点的吞吐量。
-
--c 测试包括文件的关闭时间
-
--t 线程数
-
--y 指定最小记录大小 512K or -q 512M or -q 1g
-
--U mountpoint
-Mount point to unmount and remount between tests. Iozone will unmount and remount
-this mount point before beginning each test. This guarantees that the buffer cache does not
-contain any of the file under test.
-
-iozone -a -n 512m -g 16g -i 0 -i 1 -i 5 -f /mnt/iozone -Rb ./iozone.xls
-
-注：进行全面测试，最小测试文件为512M，直到测试到16g，测试read,write,和strided read,测试的地方在/mnt下，生成xls文件。要求-g参数大于swap的两倍
-
-
-
-
-
+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
+l8f65xd8JRs=

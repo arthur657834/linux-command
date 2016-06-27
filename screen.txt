@@ -1,43 +1,26 @@
-screen:
--A 　将所有的视窗都调整为目前终端机的大小。
--d <作业名称> 　将指定的screen作业离线。
--h <行数> 　指定视窗的缓冲区行数。
--m 　即使目前已在作业中的screen作业，仍强制建立新的screen作业。
--r <作业名称> 　恢复离线的screen作业。
--R 　先试图恢复离线的作业。若找不到离线的作业，即建立新的screen作业。
--s 　指定建立新视窗时，所要执行的shell。
--S <作业名称> 　指定screen作业的名称。
--v 　显示版本信息。
--x 　恢复之前离线的screen作业。
--ls或--list 　显示目前所有的screen作业。
--wipe 　检查目前所有的screen作业，并删除已经无法使用的screen作业。
-
-screen -S lj -X screen ping www.baidu.com
-
-C-a d -> detach <==>screen -d
-C-a w -> 显示所有窗口列表
-C-a p -> 切换上一个窗口
-C-a n -> 切换下一个窗口
-C-a s -> 锁住会话
-C-a x -> 加密码锁住会话
-C-a q-> 解锁会话
-
-Ctrl-a 0-9 -> 切换窗口
-Ctrl-a "    # list all available screens
-
-C-a S -> 水平分割屏幕
-C-a | -> 垂直分割屏幕
-
-多屏显示:
-screen -r lj
-screen
-Ctrl-a tab
-Ctrl-a 1
-
-屏幕共享
-A：
-screen -S lj
-B：
-screen -x lj
-
-
+U2FsdGVkX1/nHEqmItE7a7JFWBqxXKC5h/Ef+FG75pTSoH2JHF1g7fuMBWiph7Ql
+UaFVEkKY9EnyPuVyOxThmGtjoPhUdCLGocMyv8Lon75BjYgNhgqJJrNL7Nx43XtM
+qZJWvE+O91SpH7QTSza2WXG8+EnJstDVmf4pqg67Q9QDTVVS9l6WqJ4y0MWbCX/E
+DbDuBOtSngcriMDsodFC1zGNSU3ccvme4B5PQDfy2I67vUWGPM/njauRlkLrtBMj
+WjFe/10S2nlhErJCpIp+G1PrMb1+gnc6oQcT3h7ohA3+QvCpUCyGusGkoySRFcOB
+tK6AgExlRL6VF+QV/+2p9sDY9HA98Su2+w7GXMsR/iJnp3fzaBlvGhZa9YZWXBW+
+m7RJ4rHpVl/EQCE6LgMzr6gq4Fbx55AFQYEM6WY3PlQm2UGXq+Pvwlr5nfH9AuQV
+oYExIzEhUEQD3wJvnbXv9WvrGB1s9fYwgo2SgZtS2dN3OTRFpzDIJMnGJH2g400X
+updrzVyp2Ylo4FtYVoy+PfSmQVcvppVVvdaZluKdaL906/mMWb9tb+HVA8urHljd
+HBH+pTfSrpp+JoXyHCwKch1VfHHtoNOSTuTbM6Rlo6tPoeldazLnEnQdI3uBjjH4
+jAA9xttcuNqXTzEN+fxQsa3MfUuoGDL6b26EtSJwqEwgwJxHofvSVqOxXEdn/OaU
+lgt2k1wFKxPKB8w+3Rm3SoVBNlYc7cbpchcQqwO+ltFuHiXZIYu4iLXuSimeO6bp
+omtXfNXg1BbLglR+CTpnBVWlARgn8bFi9Fk+0OWRYm5WZeCpdHsZ3YVLCEjESDoq
+G8FWQ8hYI4ZSa16rwVIyO8pl55J6LutDbuIqXEqA3TfGInjQIMQg01++qM5WYbFt
+8NFhGeJvP9ILBWsudk6dbqUa/qUGTRi4exXUMfDygnSfXEQFWa9oIn9tCYx2z3Vd
+E0U/dWj+tTq78vQsJm9QJADV4q90263sIC5QAR/NdTnUhWfEq/VfRfnG59TI3p9r
+Ng15NMsw70cdruf/LVHkXp3RbNqkuI9JnIXdpYef8XVOFZRRgy9Ua9mfjUgkdC3l
+ydOgpaLRum1nzcqxtdiuchDsN/el5/uLAxCn+b+htCaQSESOIsWGzw1Vg7PQd/3/
+JqBpqYF26y+WGIzCYWZ3STifcWLLkuK0mwQZ7zWzZ5tnghghzxubrKga+MUQCD0W
+ud3PU0RArZ+1IPDn6GpJOg6lQjT1KWuxh58aEGu+2kGjwOGZUwxUHaFBWmkbyMwS
+nzztLTB24MTPVan5Uo740/E+QAiLirotHKzR/m7+k8u/mO0b8tZwgbQmmA5Imn9H
++ly2alb1fcJCUOp5yJeprns+ke74Pfjnz7oYJeAU51arxded0Slrg9YBVXgRc/+0
+N+DBk4UixNNA7HL1qWCGttsmsP0WbZajEnfVkFVOQq4z+v9/HliqlwHCrUe57SNF
+DTWhWaVNwB+iEF3t4JGQ/lyQLqp1M9bQXrkCxhCa652A7hYSbRjUSneBJkIv7LWD
+s/dqFQwZRiKX81oyNZa6ajA0Y/XRXGqAHZ4DulrRX8WT7Hmsz8QKoGInN4z3auHM
+zDglga5r9Ac8LT/RTggZay9MlmJVa+MeyeqsOP+85M/tXI/ixp/jBQ==

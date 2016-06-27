@@ -1,18 +1,12 @@
-yum -y install nethogs
-用来按进程或程序实时统计网络带宽使用率
-
-ex.
-nethogs eth0 eth1
-nethogs eth0 -t
-nethogs -d 5
-	-m: Change the units displayed forthe bandwidth inunits like KB/sec->KB->B->MB.
-	-r: Sort by magnitude of respectively traffic.
-	-s: Sort by magnitude of sent traffic.
-	-q: Hit quit tothe shell prompt.
-	-d: delay for refresh rate.
-	-h: display available commands usage.
-	-p: sniff in promiscious mode (not recommended).
-	-t: trace mode.
-	-V: prints Version info. 
-
-
+U2FsdGVkX1+o3+emjrNfJrvqzjy1fn4iacCGXJXgAomvfft4YHwGzG6M9mWt8xXl
+Gw5vKps7qpvb9E8AGPnuHn3p0m+4dp6kaVkRWi90bB2AUdiTGXXLyGBzbCmoU9YK
+uEgfxmmxsH1xuj/+asRCCKw1JcKcPwe9vzWsUJS4Zwjg9irLLKc0YkpPSYIuA/du
++pZf9aXnhRB7p/75nUYrYG8CmaAYOqNlPDNvjNS8TBOVDMkpxzW+yUXUGGDByO6U
+Zq9j8ZNd3oEWCUdyHqzCjl4/e3bFsLu0S0wDS9BtzqL9Jr4u1/I/ycktBqAXr9Fp
+Qx0nY3DwZAc/mUog7E2VTez8jYcBuqtpqrFHQEk6DsP8XcsOdI/ReepexxOmQpb1
+4XFeaW0A6fejrFUeW99SkD722sTBZLI2sWKVsyuz/F4NfQzDnxQ38UbHWh1yL59K
+BJfwbD3fGacWaeOR4CWhEI9PoyW5J47T/Pli5w4Nv6amX1Bd+WY5g08YvZ/0f15P
+xNSBpyxciaPTNxXsuXVgmMolGsmNdj2ZgtpSNr6NT5kFWVdi3utVRtrjOaTy6hFD
+nbqnIybuguwXFbDuQZCUNP555rJuJlQSpjEdOx8ma7OAKgc2pGLR/wxW5r/fOXkf
+cqxiLEi+KbioByFsOOIeASip2AYABCFEP++zvZlswQKdVQgMj2DsrexrQnIDKxPM
+y14I9b/M1v4=

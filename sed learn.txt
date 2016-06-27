@@ -1,78 +1,41 @@
-a在当前行后面加入一行文本。 
-i在当前行上面插入文本
-#匹配行前加
-sed -i '/allow 361way.com/iallow www.361way.com' the.conf.file
-#匹配行前后
-sed -i '/allow 361way.com/aallow www.361way.com' the.conf.file
-
-在第四行（指具体行号）前或后加一行内容
-sed -i 'N;4addpdf' a.txt
-
-sed -i 'N;4ieepdf' a.txt 
-
-ex：这结果为什么是这样,以后用的时候注意
-sed -i 'N;4iaepdf' a.txt;cat a.txt                
-1
-2
-aepdf
-3
-4
-
-这条没看懂
-删除指定文件的上一行
-sed -i -e :a -e '$!N;s/.*n(.*directory)/1/;ta' -e 'P;D' server.xml
-
-删除匹配到1的下一行
-删除指定文件的下一行
-sed -i '/1/{n;d}' server.xml 
-
-sed -i '2i\3455' test.txt  
-插入文件第二行
-
-sed '1d' ab
-#删除第一行
-sed '2,$d' ab
-#删除第二行到最后一行
-
-sed -n '1p' ab
-#显示第一行 
-
-sed -n '/ruby/p' ab
-#查询包括关键字ruby所在所有行
-
-sed '1,3a drink tea' ab
-#第一行到第三行后增加字符串"drink tea"
-
-sed '1a drink tea\nor coffee' ab
-#第一行后增加多行，使用换行符\n
-
-sed '1,2c Hi' ab
-#第一行到第二行代替为Hi
-
-sed -i 's/ruby/bird/g'
-#替换ruby为bird
-
-sed -i '$a bye' ab
-#在文件ab中最后一行直接输入"bye"
-
-sed -i '/匹配字符串/d'  filename
-#删除匹配行
-
-sed -i 's/替换源字符串/替换目标字符串/g' filename
-#替换匹配行中的某个字符串
-
-sed -e '/test/h' -e '/check/x' example
-#包含test与check的行互换
-
-sed '1,10y/abcde/ABCDE/' example 
-#把1--10行内所有abcde转变为大写
-
-sed 's/[[:space:]]//g' 1.txt
-删除所有的空白字符，包括tab
-
-sed -i '3{p;s/.*/date/e}' param.sh 
-e:excute  将date的执行结果进行替换
-
-sed '/xx/{x;p;x}'
-p 打印pattern space， 打印空行
-x 交换pattern和hold space   这时hold space为空，pattern space为匹配/xx/这一行的内容
+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
+PVF97N3KLqI=

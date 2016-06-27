@@ -1,91 +1,60 @@
-http://sourceforge.net/projects/xmlstar/files/xmlstarlet/
-yum -y install libxml2* libxslt*
-./configure
-make;make install
-
-xml fo -h
-更多参数查询
-
-xml fo test.xml 格式化xml文件
-
-xml ls
-生成当前目录的xml文件
-
-xml ed -d "//d" -d "//@a"  test.xml
-删除d节点和a //d是xpath写法
-
-xml ed -r "//f" -v "file" -r "//@s" -v "size" test.xml
-替换节点f名称为file,属性s=>size
-
-xml val test.xml
-检测是不是符合规范的xml文件
-
-xml sel -t -m "/xml/file" -v "@name" ls2.xml
-xml sel -t -m "/*/*[2]" -v "name(.)" 1.xml 
-xml sel -t -m "/xml/file" -v "concat(@name,' ')" ls2.xml
-取/xml/file下属性name的值,concat 每个值之间以空格连接
-
-xml sel -t -m "/xml/file" -v "concat(@name,'
-')" ls2.xml
-属性name的值换行连接
-
-xml sel -t -m "/rss/channel/item/description" -v "." test3.xml
-取属性description的值
-
-xml el test.xml:输出节点
-xml el -u test.xml:输出唯一节点
-参数意义最好写之前再看一下！！！！！！！！！！！！！
-–a 属性
-–v 属性名称及其取值
-–d1 深度
--n 自动换行
--o " = " 输出=
--c 表示copy拷贝
--T 删除掉所有的xml标签
--f 输出文件名称
--C 生成一个xsl文件
--t 表示使用模板 
-
-xml ed -i "/*/*[1]" -t attr -n "www" -v "google" 1.xml 
-<name>book1</name>  => <name www="google">book1</name> 
-
-xml ed -i "/*/*[2]" -t text -n "" -v "my baby" 1.xml
-增加my baby 
-
-xml.exe ed -i "/*/*[1]" -t elem -n "www" -v "google" 1.xml<=> xml ed -a "//name[3]" -t elem -n "google" -v "web" 1.xml 
-增加<www>google</www> 
-
-xml ed -m "//name[1]/text()" "//name[2]" 1.xml 
-移动值
-
-xml ed -u "//name[1]/@price" -v "888" 1.xml
-修改price的值
-
-xml sel -t -m "/*" -m "//*" -v "sentence[not(contains(text(),'love'))]" 1.xml
-
-xml sel -t -m "//mother" -s A:T:L "name" -v "name" -n 1.xml 
--s就是“排序（sort）”，A就是升序，T表示后续的“name”这个排序元素的值是文本（text），而L表示小写字母优先排在大写字母之前，L就是lower-first的缩写
-
-xml sel -t -v "starts-with('good','g')" 1.xml
-xml.exe sel -t -v "normalize-space('I  love   you.')" 1.xml 
-多个连续空格变为一个空格
-
-xml sel -t -m "//b" -i ".<3" -c "." 1.xml 
--i if小于3输出  -i <test-XPath>
-
-ex.
-<?xml version="1.0"?>
-<r xmlns="http://www.bing.com">
-  <b>b1</b>
-  <b>b2</b>
-</r>
-
-xml ed -N x="http://www.bing.com" -d "//x:b[2]" test5.xml //xml ed -d "//b[2]" test5.xml 是不对的，注意学习，以后写xpath相关的东西可以学习
-参数部分表示给“http://www.bing.com”这个名称空间取一个名称，叫做“x”，因此在后续的XPath中使用就让XPath的定位变为生效了
-
-xml sel -t -m "/*" -v "namespace-uri(.)" test5.xml 
-<=> xml sel -t -m "node()" -v "namespace-uri(.)" test5.xml 
-<=> xml sel -t -v "namespace-uri(/*)" test5.xml 
-取xmlns的值
-
-
+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
+JgR4eS3im68=

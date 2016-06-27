@@ -1,43 +1,34 @@
-awk '{pattern + action}' {filenames}
-
-$0则表示所有域,$1表示第一个域,$n表示第n个域
-ARGC               命令行参数个数
-ARGV               命令行参数排列
-ENVIRON            支持队列中系统环境变量的使用
-FILENAME           awk浏览的文件名
-FNR                浏览文件的记录数
-FS                 设置输入域分隔符，等价于命令行 -F选项
-NF                 浏览记录的域的个数
-NR                 已读的记录数
-OFS                输出域分隔符
-ORS                输出记录分隔符
-RS                 控制记录分隔符
-
-在awk中调用系统变量必须用单引号，如果是双引号，则表示字符串 
-Flag=abcd 
-awk '{print '$Flag'}'   结果为abcd 
-awk '{print  "$Flag"}'   结果为$Flag
-
-ex1:
-cat /etc/passwd |awk  -F ':'  'BEGIN {print "name,shell"}  {print $1","$7} END {print "blue,/bin/nosh"}'
-name,shell
-root,/bin/bash
-....
-blue,/bin/nosh
-
-ex2:
-搜索/etc/passwd有root关键字的所有行，并显示对应的shell
-awk -F: '/root/{print $7}' /etc/passwd   
-
-ex3:
-awk 'BEGIN {count=0;print "[start]user count is ", count} {count=count+1;print $0;} END{print "[end]user count is ", count}' /etc/passwd
-
-ex4:
-ls -l |awk 'BEGIN {size=0;print "[start]size is ", size} {if($5!=4096){size=size+$5;}else { printf "end"}} END{print "[end]size is ", size/1024/1024,"M"}' 
-awk -F ':' 'BEGIN {count=0;} {name[count] = $1;count++;}; END{for (i = 0; i < NR; i++) print i, name[i]}' /etc/passwd
-awk '{ i=1;while(i<NF) {print NF,$i;i++}}' file
-
-ex5:
--v var=val 把val值赋值给var
-awk -v num=$num -v num1=$num1
-
+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

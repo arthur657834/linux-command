@@ -1,4 +1,4 @@
-enable
--n：关闭指定的内部命令； 
--a：显示所有激活的内部命令； 
--f：从指定文件中读取内部命令。
+U2FsdGVkX18oVGmyG06H8Tj7BvMzi/u9Hj4zW8WDh02qSPs+FBbcjJsAWzFwRUux
++ALzYEjRwcIQhtkSZpOeU0Weu3LwDRwu3jHIERo37uiZ2nSvDVNYSEM5J7opo6OB
+QanaWpy/GLVCZCtYVxOg+EIIk5WFYQ0uSuptRy0ENCoQTa7xRXd4dfScFwMMwhnl
+FbU+1NncApM=
