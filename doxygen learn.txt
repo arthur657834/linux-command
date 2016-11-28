@@ -1,5 +1,9 @@
-U2FsdGVkX1/bYhabM6/cygqldrWTbqFmyg/tBAgmfLeFqFA3hf613U1uFM9Ep5Pn
-pBegbLWQPsGRwxGjw4IHjTm0ejnA5jNO8cZG+D+EmuX5IHlLvIq76va37MLcsrsZ
-hGyNeCtdrT6asbesnC5s2gLEIsnSW4Q4dE3Qg1IBTzklS7bcQ/glebqGwPbjeaqT
-segsZNP+g3KCMT/yn/Tp8p3E0a8EflLFAOsTe684zZT5b/wvmsyvTuBcoeWLvYDI
-xwevss+cf44=
+doxygen -g test #生成test模版
+
+doxygen -s -g test #-s 去注释
+
+doxygen -u test # update
+
+doxygen HTTPReqGenTest.java Calculator.java # 生成程序说明文档
+
+

@@ -1,26 +1,38 @@
-U2FsdGVkX19gg7KKYvrjnRJD5tQvQ41FSaNPaabo5YQh9Qp5rWCrVy869ZdkKUtc
-Deqe0vMDj4ZjPkzOHj/u0yN9K3YqzGbCuFhGH3gx+M2ivkAyHasoRWVmP453h5ye
-iyP4RQ2x56y4vnAo6EqT+KYuyIAKHyyelNA5+o1h5LlFb0dmKUV2VbpfYzYmO4r6
-npyESj1xxD+uGDxIcRrnaR/jb/hmxGm1BTJ9xxx6rp5ZlhIYKxLh5IwlJUtjgMNn
-Zkp0DKBYNHKku0kiQDiBSBpyLlgFDptWR57fTk1uoaWD1kWBLmj3NRPuGQFPVefZ
-55S3lPEH66AFY6FRPMIPQM7MorZTLnwgHsCD7r4womnDUtwLxSYrX2sEZqHOE/WV
-jLSwkKe9jBxaOAwRV33uq0ZTZne5XSvZIIvO6iwZ+oErizMtrmsPSiH0eCL3yLb3
-koJ3YZDuoYC/ZGqWiF7Y8S8zTh2VgXuE+bd5pAOB0e82Amx51nYUo7D8mqjBebvS
-eje+0Twfc+ErE+RdeXgNBvfOhhO7/0mVupV5X2X3Jb2b/f3Nihu9ZWVz+PsWyFT7
-q04L0Cxz9y+GL2sUC/5TYM2VnceQBrdrJd4SEJbga7CoiiHusO27LocPqwwacwSK
-Keiq72WM8NysaLAXNrappgGc55S18mH63M4JAT6cDJ+RwixkQB8ryBlqvP0GnsVS
-Ku+cWJY/iniZfGKQjKW0qLbJhnc+XH9FxfgHYSOHxTW1yFFihIyy4ihlA4CwY2BH
-n3mk37rA2eXvf3k94VYRylnsG41HYV0nlO4SYCyaSBw9V+duIkrd/RdB5u3pKtLr
-TwShZksgqWN5Ec5vjfl4QHXe/P8WfGz64H9i1ckns3HUUQcJZvc5WkhxkpLSMt9/
-33+qiiftkskKiHvlMIrN0UjHjGrms0OFF/o64rZBoJMZ81vTZqwP7pbx+cCnveWF
-T5NKJ/HsNfTtaJhnUCNhVZFuHc5ZU9vPIgfQlrzVswwVgxfJ1Mstzo4XYjbWNQvU
-/4Z4G6xqxSG2jvzgggo89fh5jqllCvW/8OUDIAEPR8AIp0ELWMccsdDgcMQeza8/
-yrlzkHn8DPOgouAJcrIdsld5KSkylRIDKWmJp5AhpD3lJxsX95SKlixAlvqjTn2H
-AfkOqSbplv6CzI6OQQsm5euOiui9CcUMapf2tXn2jL76J4/Wd/BFlUKbzLSBPccT
-7O9fyMppY09HtQTmoQm+ZdaFu4wp3Ah3146jIeMii/YKLjJbm14ztH6X/gMEN+0Z
-J3ZD61+1xS75Bv+Qevn0RDuE4hkjbz2mOVmqOPwSgabNY33hzcNO6Diuiyennpdf
-PDpPou0DH6GVTaFyTUXi21OCCgt8+60POB/bKFhqUcCfwvN+Opx+ss581KRg9Chb
-7L6AZZEiBhjJ7Ab1GqpGrIDAHLtWnXMC9TbbLSFZ8FrZ3weLMardRePadLBYpmU0
-5SX67eoRm7fGnphtJmboB5yNSSb+n8qkBaTeo0/iepH8gtq4tTyVXcb5BZXBkrI/
-dBQ7NQJ3Srr1a/yXxI5eKONsCNF5xpMYnUS9O4Ln9taoSbhT1k1uX+oJvlu4sPc1
-HpJgHBUMoLGrUTq/Ce+xSw==
+yum install util-linux-ng
+
+lsblk
+
+NAME : 这是块设备名。
+
+MAJ:MIN : 本栏显示主要和次要设备号。
+
+RM : 本栏显示设备是否可移动设备。注意，在本例中设备sdb和sr0的RM值等于1，这说明他们是可移动设备。
+
+SIZE : 本栏列出设备的容量大小信息。例如298.1G表明该设备大小为298.1GB，而1K表明该设备大小为1KB。
+
+RO : 该项表明设备是否为只读。在本案例中，所有设备的RO值为0，表明他们不是只读的。
+
+TYPE :本栏显示块设备是否是磁盘或磁盘上的一个分区。在本例中，sda和sdb是磁盘，而sr0是只读存储（rom）。（LCTT译注，此处sr0的RO项没有标记为1，可能存在一些错误？）
+
+MOUNTPOINT : 本栏指出设备挂载的挂载点。
+
+-m                权限
+-f                文件系统信息
+-a                all
+-t                tree
+-b /dev/sda       指定设备
+-S                要获取SCSI设备的列表
+-s --inverse      
+-nl 
+
+类似的命令：
+blkid
+blkid /dev/sda1
+blkid -U d3b1dcc2-e3b0-45b0-b703-d6d0d360e524  <UUID>
+blkid -po udev /dev/sda1
+blkid -g         重置缓存           
+
+
+
+
+

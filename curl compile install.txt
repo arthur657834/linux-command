@@ -1,15 +1,32 @@
-U2FsdGVkX1+Ji79/GZvqZ7DKWDiFc96yqGXdBoTlTa4bcOxA4lKRqBQlak3P8wwe
-D4EYcPKNNEdGfFbUzKytcINTGgNXEFxNNrUXSAkwkBUgRmh59L04j6pnI9nA3sND
-sAc1it/dDmV1EZpJjVO6SAzj6znfgCgId+jLePTDGwSZJSGd3VdyVZ1eQRtorMEp
-0Hhp6my6tH0FJ4HnRkk1ZGHyrL7gg7F0x4AF3ugV3+Y3sSV54r09MGr2B8VOsbr9
-AvT42aGGftGdVzuUdsX/X76y+EQGjpROAZbU8887O1r3U5xFeJc5Eb3vx4sfgwCa
-5mNiXd8/hwIW7+NyMlU5nlQa95AlKo7xC9HqtiSzHlnHMuXJNAPe7SYyGJuzTwgA
-0ZMU+iKQZDs57al4F2uVYuOZMTygzfC1ugqcN6Obb9ngqAjpiZQVL+bGvGzlCWVr
-pzXVw4L4FrmVt+S35aTXJa8Upah0X05aWvWw4m2cGJaYVN3dRBy+88x//zMgkAJb
-ceLu6g0WYW7Qt95/MEScJcFAuO8i+VqDXgsPfqc77gUmWfQRIau3S4kLHP1l96yR
-nod+ePyrFAJwazqyyvJZXXVpsFt311PoIQRKRisvpidNqf1votj/jD7UajMp30GC
-+zGsKNIKQpqd1NNPRmCD9iLMeCjPXTklXlm55veUrMdh+sNlt+BxaEv84SBSDd6J
-Oes8Lxm9CMHQHts+MFR2tiAgzFZOea6fz/oV2vxEYbQPH0qKE0iNzOcVYqGh2+6H
-2Q5m+dqYhFBUzUIZ76xHai5ySJnx1fF/DItHfPwWbDLZWuBZtUJeLdsARwWKpg82
-n2nRNIbJKtGiFeoZxV7OeT2brF1zZzQ2XPvPDvyRHGa05hmRyuLIMY9QfVn3Gt4Q
-Ruu08YDeU1tcqjYE6UCPUYPbUFUTNGovXBt8hRv7stwhflGYD/XxRg==
+yum install epel-release -y
+python-setuptools libxml2-devel libevent-devel openssl-devel jemalloc-devel jansson-devel CUnit-devel libssh2-devel
+
+spdylay：
+	git clone https://github.com/tatsuhiro-t/spdylay.git
+	cd spdylay/
+	autoreconf -i
+	automake
+	autoconf
+	./configure
+	make
+	make install
+	
+nghttp2:
+    git clone https://github.com/tatsuhiro-t/nghttp2.git
+    cd nghttp2
+    autoreconf -i
+    automake
+    autoconf
+    ./configure
+    make//报错下次再试
+    make install
+
+curl:
+	wget http://curl.haxx.se/download/curl-7.46.0.tar.gz
+	tar xvf curl-7.46.0.tar.gz
+	cd curl-7.46.0
+	./configure --with-nghtt2=/usr/local/nghttp2
+	make
+	make install
+
+curl –version 查看是否编译成功

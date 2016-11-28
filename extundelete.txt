@@ -1,0 +1,40 @@
+yum -y install extundelete
+
+extundelete /dev/sda2 --restore-directory /home/dir_need_recovery 
+
+ls -id 
+命令来查看某分区目录的inode值
+
+如果 block 大小刚好是 1024 的话，那么 boot sector 与 superblock 各会占用掉一个 block ， 也表示boot sector 是独立于 superblock 外面的。
+
+dumpe2fs /dev/hdc1
+
+Group0 的 superblock 是由 1  号 block 开始的
+0 号 block 是保留下来留给 boot sector 用的
+
+如果 block 大于 1024 的话，那么 superblock 将会在 0 号！
+
+可以发现 superblock 就在第一个 block (第 0 号) 上，但是 superblock 其实就只有 1024bytes 
+
+为了怕浪费更多空间，因此第一个 block 内就含有 boot sector 与 superblock
+
+上面结果显示，因为每个 block 占有 4K ，但是 superblock 其实就只有 1024bytes
+
+因此在第一个 block 内 superblock 仅占有 1024-2047 ( 由 0 号起算的话)，而 0-1023 就保留给 boot sector 来使用。
+
+而后面的2048bytes 的空间保留
+
+tune2fs -l /dev/sdb1
+
+superblock如此重要，所以系统也对superblock做了一些保护措施
+
+文件系统会有一些备用超级块，备用超级块一般创建于块 8193、16384 或 32768
+
+ext类文件系统会把block分成一组一组来管理简称为块组，可以看到Blocks per group这一行，就是每个group都包含了32768个block
+
+每个group都会有一个备用superblock，所以备用超级块一般创建于块 8193、16384 或 32768，根据格式化时的block size而定
+
+
+注意：非ext类文件系统是不能用tune2fs命令的，而且原理和内部格式跟ext类文件系统不相同！！
+
+

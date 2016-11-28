@@ -1,4 +1,4 @@
-U2FsdGVkX1+c2OD2Y611HfTTG547S4lJX6DwzWiJ62kiOgpiXIrsuOBHurtqvMyt
-tTjtq538CIeUpYr8umNN9UVZXJtabrOZs3Sov5dGgds8KgqnjuobwQAi4P6Ca044
-muFJHUV2f15aZ6ESnD33ybGEav9FR2KtxxGYwclsEXZ/DQ20cb62FOqsNcC3mEUK
-EfQ5i/31C+s=
+enable
+-n：关闭指定的内部命令； 
+-a：显示所有激活的内部命令； 
+-f：从指定文件中读取内部命令。

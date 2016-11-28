@@ -1,11 +1,10 @@
-U2FsdGVkX18M62d44i9mDxt/+fBZLvydCRDBK+7uuUnngNMxNTfucHJYskR+ic6s
-BKKnp2NVc3Bu7p7s+bbH4an62ikEXfUwWDpaoO4Q/kf/6fJzrNA10QGA9oYXZaBT
-Q/EZNa7OjEfyggCckzeR0GpwFlCM3iDMS/5u65RrnqiHdKyrRoyYrSZzpX0cTe+J
-VLdMKbRC4XfrUeRe075EqbCzfp5cDjTcUVc0nwIrUvRK7B7Vk6fogr/hSnLomFr9
-rBJ4FVQbx3sF021nDbzenRcngq7Lo96ipSdUYfnB4fhG33YKmOhilnjTXUWBOZd6
-aZFCAIO7HH2qHCOK4Rqp/Z/AYzhVaYCzkAOPq45VuvX8re3BazxljB3kwlIDBHvZ
-OMyHWUwgARQt0HYT6uIYEThOp01CRiMXMpFNECE7AB1ODwLu2Zze26wHk806XjNI
-+oCFgLcRR7czIhFzhclaHM1S7H7pn+81lwcJALSY+UqKpzSiGgJxQMNpSqdrApS7
-AiauX0qnPu3RCkE3u3570kQtR0KIPbJcXL/HqTLIPZ5E2bfLkg56Wb33tBo4THpz
-mwpPCssoDx3qqcDaQZ9B0CNN+ERqMjM3CZKUWmIn40cKlnPVeDGxqhZeqsMJjKEh
-dMrWNZ0416I4M/OHBzVirg==
+alternatives --install /usr/bin/java java /usr/local/lib/java/jdk1.7.0_67 17067 
+# /usr/bin/java   java link所在的路径
+# java  创建link的名称
+# /usr/local/lib/java/jdk1.7.0_67  java链接指向的路径
+# 17067  根据版本号设置的优先级（更改的优先级需要大于当前的）版本越高优先级越高
+
+alternatives --remove  java /usr/local/lib/java/jdk1.7.0_67
+alternatives --auto java
+alternatives --config java
+alternatives --display java

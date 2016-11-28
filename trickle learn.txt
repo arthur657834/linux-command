@@ -1,14 +1,18 @@
-U2FsdGVkX1+ZtFHpF4HzVuX5vpOClC903g52ZsD7zxX5qOyW+OJFzpJLQJgx6pGA
-8SEHhUSv9/lnFxABHk89uCX9AriGCMF4qEOV+geX+JWr0Ca1W8XaodpOcDKZyX4H
-OmpwBW88M7wxtdY29tPOqk3PVR9BsOn+/0kbixxhmQfED1PS6zZDaC69zN6iyf95
-/EdY1+ynqA0r11P4zVrBxS4ET6xBBC8ky3HxlBc6uuRdMJNb+duDR3q6azmJBb3C
-HLwUcnCDlW2D0F3aBGP8D98G0dNTsbybMMyTr1K7x9Y67VRs+nbky58RrgBFsJeT
-aSfGranFThppDiHNuXapmy6uzJUPo74S14ZcKpawBlwYFzhchTs4TLc/77dwrFIB
-1+iBv+I4X8feBGOWjHWG4v3mQ/03CfAWp7ELL9tyNzcpmhMcZcZc1TlwFp2bCrO1
-VtFB8qmvsDT8+ZCbOERIDwOsK7hEYH+onsQzqwvqZ8lh1AWDqzrOH/s84QJWLJ+o
-vauxKGo0I7wo17CjGMgEdBCw4t73BbW294SX55MVdqSztqBAJHrBLur/JgwSq3yS
-LVCqYmgXQm0J/Is5zRPl70qvdcCNmeuaPbbyCbef4vNXROsPqYjSaTwCy4VUVTN3
-4QzjU3tjpinydXcXPwNxlnSjG2DS6DGsQocr88h7qQzvSvCDWtuqcOb7plggUnxJ
-YyHtKika/h6TAh1suRbh7CdG8W7BzlZyIb71lytvhFItOPpz9VoM3uL79kp0Skwk
-i3U8DILTuSVHDubkPpypYd7GZZJ54j8e8SxF4ILHqFj7FQksRY0XrwRGqPqi8VGv
-HQeoXx3k+PCvbk+n1K8+cyOWB8j/VaL+VRsT9S34dNcNb6ux74c9+qP9tCYLsrS9
+yum install -y trickle
+
+trickle通过控制socket数据读写量来控制和限制应用的上传和下载速度。要注意的是trickle使用动态链接和加载，所以只对于使用libc.so库的程序有用，其他的则无效的。
+trickle不能用于限制使用UDP协议的应用的带宽，只可用于TCP连接。也无法工作在使用静态链接的可执行程序上。
+
+查看程序是否应用率libc.so库
+ldd /usr/bin/wget | grep libc.so
+
+ex1.
+	trickle -d 50 wget http://dldir1.qq.com/qqfile/qq/QQ8.1/17202/QQ8.1.exe
+	限速50KB/s
+	
+ex2.
+	trickle -u 10 -d 10 -s bash
+	限制一个shell的所有命令带宽
+
+	
+	

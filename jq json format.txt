@@ -1,35 +1,40 @@
-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
-wx4xVl6J/LStmOOqvGDPYQ==
+https://stedolan.github.io/jq/manual/
+
+yum -y install jq
+
+cat json.txt | jq .
+
+cat json.txt | jq .[0] 第一个json数组
+
+jq '.[0] | {message: .commit.message, name: .commit.committer.name}' 读取message和name，并重定向到文件
+
+jq '[.[] | {message: .commit.message, name: .commit.committer.name}]' 结果变成json数组
+
+jq '[.[] | {message: .commit.message, name: .commit.committer.name, parents: [.parents[].html_url]}]'
+parents field is being set to [.parents[].html_url]
+
+cat json_raw.txt | jq '.location.state'
+
+cat json_raw.txt | jq '.author | {name,name2}' //单独显示name,name2
+
+cat json_raw.txt | jq '.employees[1].name'
+
+cat json_raw.txt | jq 'keys'//获取所有的key值
+
+cat json_raw.txt | jq ".[]" //获取所有的value值
+
+cat json_raw.txt | jq 'has("name")' name的可以值是否存在
+
+echo '{"foo.1": 42, "bar 1": "less interesting data"}' |jq .'["bar 1"]'
+
+过滤器说明：
+.foo, .foo.bar
+获取json中key的值，可过滤出多级json串中的key值。
+.foo, .bar
+同时获取json中多个key的值。但过滤出的多个值会分多行显示。
+{foo: .foo, bar: .bar}
+获取json中部分key的值，并组合为新的object形式的json串。foo与bar即新json串的key，.foo与.bar即原json串中需要获取值的key。
+注意，生成的json串内容顺序是倒序的，上例中会生成：{"bar":"", "foo":""}
+[.foo, .bar]
+获取json中部分key的值，并组合为新的数组形式的json串。.foo与.bar即原json串中需要获取值的key。
+注意，生成的json串内容顺序是正序的，上例中会生成：["foov", "barv"]

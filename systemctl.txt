@@ -1,26 +1,56 @@
-U2FsdGVkX18Z3vJoHVmlA7DfOZitsM1myVbv//8ZbY7qwoS4jm+cUPYmA+Vb6owP
-OqezIW6H9VAjeAUr1e8Tyd/JfEENa03LG5ErT69nLMbi4eiPSUQSByLG438AwCLm
-Fg/MErRJAQdYuzTmnTvS/C2E09w6Eo3w/z7Z/YvBe5LG6fDSm6gdiEVr3kkPW6Ts
-5iKbOXRYoSKjF1Vl5tSMsy8+0VpMcdypMQm1mfXqFc1XmgRx9rRDMlWGXzYskV2z
-q6Vu2CxwkdjmVKM955SYCCZpJTPArdGRXvTjeSZ/JtZwN3B2jqpsbh4EEXhOj7Lr
-TG67aGkbdwUiQCx3V9xfRjjhoTpYt6EwFtGgHdOs7K5RJ9YFN9s2KNDvV5g9ONiM
-x8OhQPtqesisjnLDt1+AnSbH3Mlxd86Fe9TPvnzmZ5iyTsg7yqvhHXRqq4uDsHll
-ajgAd6HLchb2J5x8O2VY1+xYwp+VcOI32mJp+qs+Y3FsTB0SIinOIiEkwsnWYs5I
-KbI2i8QStIJDFLVmFJb1W2cBf/+ut1Jqt91jTfFBFqPEDalbtByKINfFwUpBnNM6
-4AcdwHkz3wmfL73KCGhNsacSZJTNOpBPmaDpRMK4CRHJOWFb2e5/8Q8VPrDuVEcM
-FrWNBBgyEmIbfP0BkG1sEP2L/IpuC7uTeLoRbUHthwxmGRI3NxF1bQj+aDqp30eR
-LSN+0yjO0ShpWqWBG2CFBx/AkECOxRJ4RtOT3XJ+ppH3hRQzHb8ybifd+Yc7aLzj
-OkMRPrlToink0WrMkwgfh3IgZ3Rtw5bEIz0LEOVVrvGnhmHcLZEE0IybdHUhTH/q
-MJJ6a3cfOz8ONqzacMpKsSPMXmqFB/QqHMVyD9Re7mUgV8Gw7evMOQalUSccucJb
-3w5mCPwP1PBc7eogP1QITbYef7upcrcQ50LBYsOyGpw/fpwVujdfZSn+80ud4LbG
-Yd/+WqLlQBb1gfkNEu8uOnkoS5NjPsIdAKv1OOJG5oQ2d8LinYeOoON9PinXFUfh
-WugmWwv2+T855A7MAUVEhviSEk0ozJPNFdNZOhylQ3BzH41dPFBLJzupRXBvyaNA
-KxAvbjFPvb48uazqSCeY6I1ID4MCgfYuqtoUGcDAuJkACDU9/AtyqAGhV72IaWFn
-Ucsw1kUjefKQBr24iaHqsAqRSxVZ6w4kIklvCrFhSwiFJZeYqG3uKc+PgTc0Gjun
-YmX/vgj3dQWy/ezDdvgO7rtdJ93pQAFgKEJjajBbAFYicSUhY3Y3jZs9CfRR2mD1
-NBxHjfWPe8vF09rn3kMQJlF7GMwgHBSDXMt6gHfJQTah+ck6QTvAfZPItf/B2FMp
-MR40jks3+klXGIG8hdbLF/Kc0NWAGExJZ1VsBSZWFxJAVP/NWt8svhST/+NYyVcH
-vpvMhWfslNoHdDclbNfCY1WTfaKcH4v+WBqQ53iyrlCjeo+moo7X+6Fbmpw0f1gi
-wAjmeEXuoPuqrPcwVGUJxphy0aCfqDB8akaaOSAtaTMRws/JubtHIlb3F4aWL4jt
-DpHqLwJdRFcnAPDX6X2i6czThmQn9MjfLGtwFbguiMku3YvNWcPPT9VE361ZkJM8
-EfE0K6cs7+dqh0VPPLyrVg==
+#查看启动时间
+systemd-analyze <=> systemd-analyze time
+systemd-analyze blame
+
+systemctl <=> systemctl list-units
+systemctl --failed
+
+#所有被激活的服务
+systemctl list-units -t service
+
+systemctl list-units --type=target
+
+
+systemctl disable dnsmasq.service
+systemctl enable dnsmasq.service
+systemctl start dnsmasq.service
+systemctl stop dnsmasq.service
+systemctl restart dnsmasq.service
+systemctl try-restart dnsmasq.service
+
+#远程管理服务
+systemctl status sshd -H root@1.2.3.4
+
+#切换当前启动模式
+systemctl isolate graphical.target
+	0 runlevel0.target, poweroff.target
+
+	1, s, single runlevel1.target, rescue.target
+	
+	2, 4 runlevel2.target, runlevel4.target, multi-user.target
+	
+	3 runlevel3.target, multi-user.target
+	
+	5 runlevel5.target, graphical.target
+	
+	6 runlevel6.target, reboot.target
+	
+systemctl get-default
+systemctl set-default graphical.target
+
+systemctl poweroff
+systemctl reboot
+systemctl suspend
+systemctl hibernate
+
+
+journalctl
+
+#查看所有引导日志
+journalctl -b
+journalctl -f
+journalctl /usr/sbin/dnsmasq
+Journalctl --since=yesterday
+journalctl --since=2014-03-15 --until="2014-03-17 23:59:59"
+journalctl -u httpd since=00:00 --until=8:00
+
