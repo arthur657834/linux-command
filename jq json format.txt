@@ -27,6 +27,10 @@ cat json_raw.txt | jq 'has("name")' name的可以值是否存在
 
 echo '{"foo.1": 42, "bar 1": "less interesting data"}' |jq .'["bar 1"]'
 
+echo $tag | jq .tags[-1] //获取最后一个数据
+
+echo $tag | jq ".page.result[] | select(.name == \"$UYUN_APP_UYUN\") | .id" // 多重选择
+
 过滤器说明：
 .foo, .foo.bar
 获取json中key的值，可过滤出多级json串中的key值。
