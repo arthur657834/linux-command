@@ -34,7 +34,8 @@ git status
 
 添加修改说明：
 git commit -am 'modify'
-
+--amend 修改最新一次对commit信息
+ 
 提交修改：
 git push
 
@@ -94,4 +95,9 @@ git tag -a v0.1 -m "version 0.1 released" 3628164
 git tag -d v0.1
 git push origin v1.0
 git push origin --tags
+
+回退到某个提交版本
+git revert <commit>
+因为本质上不是修改过去的版本历史，而是将回退版本历史作为一次新的提交，所以不会改变版本历史，在push到远程仓库的时候也不会影响到团队其他人。
+
 
