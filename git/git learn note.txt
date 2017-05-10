@@ -70,6 +70,8 @@ git merge experiment
 git merge --no-ff -m "merge with no-ff" dev
 --no-ff参数，表示禁用Fast forward
 fast forward能够保证不会强制覆盖别人的代码，确保了多人协同开发。
+master合并到feature
+git merge master feature
 
 删除分支：
 -d，表示“在分支已经合并到主干后删除分支”。如果使用大写的-D的话，则表示“不论如何都删除分支”
