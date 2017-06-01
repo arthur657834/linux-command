@@ -129,4 +129,8 @@ git push origin --tags
 git revert <commit>
 因为本质上不是修改过去的版本历史，而是将回退版本历史作为一次新的提交，所以不会改变版本历史，在push到远程仓库的时候也不会影响到团队其他人。
 
+git rev-parse用于显示一些git的基本信息
+git rev-parse --short HEAD
+显示分支
+git rev-parse --symbolic --branches
 
