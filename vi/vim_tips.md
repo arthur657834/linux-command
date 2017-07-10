@@ -78,6 +78,8 @@ q{register}
 开始录制宏,再次按q退出录制reg {register}查看
 10@{register}
 
+req {register}
+
 let i +=1
 <C+r>=i<CR>
 
@@ -154,4 +156,26 @@ argdo
 ctags
 
 quickfix
+
+(v)split filename：
+分屏
+
+ctrl-w:
+切换窗口
+
+ctrl-w-c:
+关闭当前窗口
+
+:edit filename
+编辑文件
+
+:find filename
+查找文件
+
+:jumps
+跳转文件
+
+:changes
+查看修改
+
 ```
