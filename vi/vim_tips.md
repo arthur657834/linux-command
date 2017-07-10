@@ -1,3 +1,4 @@
+```
 vim -u NONE -N
 
 -N:nocompatible 防止进入vi模式
@@ -153,3 +154,4 @@ argdo
 ctags
 
 quickfix
+```
