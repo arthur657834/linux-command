@@ -14,7 +14,7 @@ git filter-branch --env-filter \
 ```
 
 使用:
-1. git log 得到想要修改对commit对hash code
+1. git log 得到想要修改对commit对应的hash code
 2. sh modify.sh db124212db761c3df5b366b8f0480b07471c354b "2017-05-06 10:0:0"  时间为你想要修改的时间
 3. git push
 
