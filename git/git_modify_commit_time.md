@@ -18,4 +18,7 @@ git filter-branch --env-filter \
 2. sh modify.sh db124212db761c3df5b366b8f0480b07471c354b "2017-05-06 10:0:0"  时间为你想要修改的时间
 3. git push
 
+tips:
+git 在算 hash 的時候，也會包含 parent 的 commit id ，所以 parent 的 commit id 變了，所有的 child commit id 都會跟著變，這個在寫 script 批次處理的時候需要注意一下。
+
 
