@@ -16,6 +16,7 @@ git diff HEAD -- readme.txt
 取消add的文件修改：
 git reset HEAD filename
 
+HEAD 最近一个提交
 HEAD^的意思就是最新一次提交的父提交，即上一次提交
 HEAD~100 上100次提交
 git reset --hard HEAD^
