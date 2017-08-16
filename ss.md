@@ -1,3 +1,4 @@
+```
 ss -l 显示本地打开的所有端口
 ss -pl 显示每个进程具体打开的socket
 ss -t -a 显示所有tcp socket
@@ -57,5 +58,5 @@ synchronized : All the connected states except for syn-sent
 bucket : Show states, which are maintained as minisockets, i.e. time-wait and syn-recv.
 big : Opposite to bucket state.
 
-
+```
 
