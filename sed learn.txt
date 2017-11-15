@@ -81,3 +81,9 @@ x 交换pattern和hold space   这时hold space为空，pattern space为匹配/x
 
 sed -i '/<\/head>/r {1.txt N}' 2.html
 将1.txt中的内容写入文件2.html前的head前
+
+删除最后几行
+for((i=1;i<4;i++)); do sed -i '$d' seq01.txt ; done
+i=1; while [ $i -le 3 ]; do sed -i '$d' seq01.txt; ((i++)); done
+for i in `seq 3`; do sed -i '$d' seq01.txt ; done
+i=3; until [ $i -le 0 ]; do sed -i '$d' seq01.txt ; ((i--)); done
