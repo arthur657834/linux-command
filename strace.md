@@ -26,7 +26,8 @@ strace -tt -T -v -f -e trace=file -o /data/log/strace.log -s 1024 -p 23489
 * -p 指定要跟踪的进程pid, 要同时跟踪多个pid, 重复多次-p选项即可。
 
 > -e trace=file     跟踪和文件访问相关的调用(参数中有文件名)
-> -e trace=process  和进程管理相关的调用，比如fork/exec/exit_group
+
+-e trace=process  和进程管理相关的调用，比如fork/exec/exit_group
 > -e trace=network  和网络通信相关的调用，比如socket/sendto/connect
 > -e trace=signal    信号发送和处理相关，比如kill/sigaction
 > -e trace=desc  和文件描述符相关，比如write/read/select/epoll等
