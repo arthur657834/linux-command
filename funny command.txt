@@ -42,6 +42,12 @@ cd cmatrix-1.2a
 make
 make install
 
+yum -y install figlet
+figlet ljtest
+生成banner
+
+npm xmas
+生成圣诞树
 
 
 
