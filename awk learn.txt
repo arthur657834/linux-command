@@ -93,3 +93,16 @@ while(getline < "date.txt")
 {
 print $0;
 }
+
+ex9:
+echo "1 2 3" | awk '{print}' <==> echo "1 2 3 4 5 6 7 8" | awk '{}1'
+打印所有变量
+
+echo "1 2 3 4 5 6 7 8" | awk -vOFS="\t" '{$1=$1}1'
+输出空格被tab代替，$1=$1让行的内容发生变化后OFS就生效了
+
+echo "1 2 3 4 5 6 7 8" | awk '{for(i=1;i++<NF;){a=i==NF?$i"\n":$i"\t";printf a}}' 
+第二开始到最后，可指定范围
+
+
+
