@@ -31,6 +31,8 @@ echo $tag | jq .tags[-1] //获取最后一个数据
 
 echo $tag | jq ".page.result[] | select(.name == \"$UYUN_APP_UYUN\") | .id" // 多重选择
 
+./blade status --type prepare | jq '.result | map(select (.Status == "Running"))'
+
 过滤器说明：
 .foo, .foo.bar
 获取json中key的值，可过滤出多级json串中的key值。
